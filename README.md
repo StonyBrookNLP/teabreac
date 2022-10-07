@@ -1,6 +1,6 @@
 # <h2 align="center"> Teaching Broad Reasoning Skills via Decomposition-Guided Contexts </h2>
 
-This is the repository for our EMNLP 2022 paper "Teaching Broad Reasoning Skills via Decomposition-Guided Contexts". The latest preprint is available [here](https://github.com/StonyBrookNLP/teabreac/raw/main/teabreac.pdf).
+This is the repository for our EMNLP 2022 paper "Teaching Broad Reasoning Skills via Decomposition-Guided Contexts". The latest preprint is available in this repository [here](https://github.com/StonyBrookNLP/teabreac/raw/main/teabreac.pdf).
 
 ## Data
 
