@@ -1,6 +1,6 @@
 # <h2 align="center"> Teaching Broad Reasoning Skills for Multi-Step QA by Generating Hard Contexts </h2>
 
-This is the repository for our EMNLP 2022 paper "Teaching Broad Reasoning Skills for Multi-Step QA by Generating Hard Contexts". The latest preprint is available in this repository [here](https://github.com/StonyBrookNLP/teabreac/raw/main/teabreac.pdf).
+This is the repository for our EMNLP 2022 paper ["Teaching Broad Reasoning Skills for Multi-Step QA by Generating Hard Contexts"](https://arxiv.org/abs/2205.12496).
 
 ## Data
 
