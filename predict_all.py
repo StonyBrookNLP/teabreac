@@ -26,6 +26,12 @@ def main():
                     output_file_path,
                 ]
             )
+            if os.path.exists(output_file_path):
+                print(
+                    f"The prediction file path {output_file_path} already exists. "
+                    f"So skipping prediction."
+                )
+                continue
             print(command)
             subprocess.call(command.split())
 
