@@ -39,7 +39,7 @@ input_ids = tokenizer(
     input_texts, return_tensors="pt",
     truncation=True, max_length=800,
     add_special_tokens=True, padding=True,
-)
+)["input_ids"]
 generated_ids = model.generate(input_ids, min_length=1,  max_length=50)
 generated_predictions = tokenizer.batch_decode(generated_ids, skip_special_tokens=False)
 generated_predictions = [
