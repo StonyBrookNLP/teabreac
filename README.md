@@ -96,8 +96,7 @@ You can also generate evaluation metrics for all model-data combinations with `p
 
 #### Summarize results
 
-If you've generated all predictions and evaluations, you can also generate the full summary of results on all model/dataset combinations (like Table 1) by running:
-
+If you've generated all predictions and evaluations, you can also generate the full summary of results on all model/dataset combinations (like Table 1) by first installing requirements `pip install -r requirements/summarize.txt` and then running:
 ```bash
 python summarize_results.py
 ```
