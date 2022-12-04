@@ -77,8 +77,7 @@ python processing_scripts/preprocess_numglue.py
 
 #### Run predictions
 
-Install dependencies: `pip install -r requirements/predict.txt`.
-And then you can generate predictions with the model and dataset combination of your choice:
+Install dependencies: `pip install -r requirements/predict.txt`. You can then generate predictions with the model and dataset combination of your choice:
 
 ```bash
 python predict.py teabreac-t5-3b-drop processed_data/drop/dev.jsonl predictions/teabreac-t5-3b-drop__drop_dev.jsonl
@@ -88,8 +87,7 @@ You can also generate predictions for all model-data combinations with `python p
 
 #### Run evaluations
 
-Install dependencies: `pip install -r requirements/evaluate.txt --no-dependencies`.
-And then you can evaluate these predictions with:
+Install dependencies: `pip install -r requirements/evaluate.txt` (you may want to upgrade/reinstall pytorch, transformers here as installing allennlp would downgrade their versions). You can then evaluate these predictions with:
 ```bash
 python evaluate.py predictions/teabreac-t5-3b-drop__drop_dev.jsonl drop_dev
 #                  ^ prediction_path                               ^ dataset_name
