@@ -150,3 +150,5 @@ processed_data
 huggingface_models
 evaluations
 predictions
+results_report.txt
+.history

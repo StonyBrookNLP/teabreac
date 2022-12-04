@@ -7,7 +7,6 @@ from constants import ALL_MODEL_NAMES, EVALUATION_NAME_TO_FILEPATH
 def main():
 
     for index, model_name in enumerate(ALL_MODEL_NAMES):
-        model_path = f"StonyBrookNLP/{model_name}"
         print(f"\n\nWorking on model {index+1}/{len(ALL_MODEL_NAMES)} [{model_name}].")
 
         for evaluation_name , _ in EVALUATION_NAME_TO_FILEPATH.items():
