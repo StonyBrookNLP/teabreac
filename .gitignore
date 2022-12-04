@@ -144,9 +144,10 @@ wandb
 .beaker_docker_files/
 .beaker_run_scripts/
 .store
-
-raw_data
-processed_data
+.tmp
+data
+raw_target_datasets
+processed_target_datasets
 huggingface_models
 evaluations
 predictions
