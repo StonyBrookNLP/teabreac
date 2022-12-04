@@ -94,6 +94,16 @@ python evaluate.py predictions/teabreac-t5-3b-drop__drop_dev.jsonl drop_dev
 ```
 You can also generate evaluation metrics for all model-data combinations with `python evaluate_all.py`.
 
+#### Summarize results
+
+If you've generated all predictions and evaluations, you can also generate the full summary of results on all model/dataset combinations (like Table 1) by running:
+
+```bash
+python summarize_results.py
+```
+
+Note that all our experiments (training, prediction, evaluation) were done in allennlp, and we ported the models and prediction scripts to huggingface posthoc. So there may be slight difference (expectedly < 0.2 F1 points) in the numbers.
+
 ## Citation
 
 If you use this work, please consider citing us:
