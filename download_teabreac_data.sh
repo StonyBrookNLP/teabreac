@@ -10,7 +10,7 @@ pip install gdown
 ZIP_NAME="teabreac_v1.0.zip"
 
 # URL: https://drive.google.com/file/d/1DLap7BsrwEon6vJQZdtr84Ii5rr2pt8y/view?usp=sharing
-gdown --id 1DLap7BsrwEon6vJQZdtr84Ii5rr2pt8y --output $ZIP_NAME
+gdown 1DLap7BsrwEon6vJQZdtr84Ii5rr2pt8y --output $ZIP_NAME
 unzip $(basename $ZIP_NAME)
 rm $ZIP_NAME
 
