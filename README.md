@@ -87,7 +87,7 @@ You can also generate predictions for all model-data combinations with `python p
 
 #### Run evaluations
 
-Install dependencies: `pip install -r requirements/evaluate.txt` (you may want to upgrade/reinstall pytorch, transformers here as installing allennlp would downgrade their versions). You can then evaluate these predictions with:
+First, install dependencies: `pip install -r requirements/evaluate.txt` (you may want to upgrade/reinstall pytorch, transformers here as installing allennlp would downgrade their versions). Next, download the raw_data (`./download_raw_target_datasets.sh`), if you haven't already. We need them to use dataset specific official evaluation scripts. Now, you can then evaluate these predictions with:
 ```bash
 python evaluate.py predictions/teabreac-t5-3b-drop__drop_dev.jsonl drop_dev
 #                  ^ prediction_path                               ^ dataset_name
