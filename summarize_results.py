@@ -6,7 +6,7 @@ import pandas as pd
 
 def main():
 
-    metric_type = "f1" # choices: em or f1.
+    metric_type = "ans_f1" # choices: ans_em or ans_f1.
 
     dataframe_dict = { # Order is according to Table 1.
         "model": [],
@@ -45,6 +45,9 @@ def main():
 
         dataframe_dict["model"].append(model_name)
         for evaluation_name in evaluation_names:
+
+            model_name += "-"
+            model_name += evaluation_name.replace("_dev", "").replace("_test", "")
 
             metrics_file_path = os.path.join(
                 "evaluations", model_name + "__" + evaluation_name + ".json"
