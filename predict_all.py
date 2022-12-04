@@ -16,7 +16,11 @@ def main():
 
             model_with_data_name = model_name
             model_with_data_name += "-"
-            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_with_data_name += (
+                evaluation_name.replace("_dev", "").replace("_test", "").replace(
+                    "_cs", ""
+                ).replace("_bpb", "")
+            )
             model_path = f"StonyBrookNLP/{model_with_data_name}"
 
             output_file_path = os.path.join(

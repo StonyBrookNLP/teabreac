@@ -35,7 +35,11 @@ def main():
 
             model_with_data_name = model_name
             model_with_data_name += "-"
-            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_with_data_name += (
+                evaluation_name.replace("_dev", "").replace("_test", "").replace(
+                    "_cs", ""
+                ).replace("_bpb", "")
+            )
 
             metrics_file_path = os.path.join(
                 "evaluations", model_with_data_name + "__" + evaluation_name + ".json"

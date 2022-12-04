@@ -17,7 +17,11 @@ def main():
 
             model_with_data_name = model_name
             model_with_data_name += "-"
-            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_with_data_name += (
+                evaluation_name.replace("_dev", "").replace("_test", "").replace(
+                    "_cs", ""
+                ).replace("_bpb", "")
+            )
 
             prediction_file_path = os.path.join(
                 "predictions", model_with_data_name + "__" + evaluation_name + ".jsonl"
