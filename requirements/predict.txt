@@ -3,3 +3,4 @@ dill
 tqdm
 transformers==4.24.0
 torch==1.12.1
+sentencepiece
