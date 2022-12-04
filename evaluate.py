@@ -80,7 +80,7 @@ def compute_answer_scores_with_official_scripts(
 
         run_command = (
             f"python official_evaluation_scripts/drop_eval.py "
-            f"--gold_path raw_data/drop/drop_dataset_dev.json "
+            f"--gold_path raw_target_datasets/drop/drop_dataset_dev.json "
             f"--prediction_path {official_prediction_path} "
             f"--output_path {official_metrics_path}"
         )
@@ -98,7 +98,7 @@ def compute_answer_scores_with_official_scripts(
 
         run_command = (
             f"python official_evaluation_scripts/tatqa_eval.py "
-            f"--gold_path raw_data/tatqa/tatqa_dataset_dev.json "
+            f"--gold_path raw_target_datasets/tatqa/tatqa_dataset_dev.json "
             f"--pred_path {official_prediction_path} "
             f"--output_path {official_metrics_path}"
         )
