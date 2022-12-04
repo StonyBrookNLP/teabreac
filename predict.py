@@ -113,7 +113,7 @@ def _generate_predictions(
         input_ids,
         min_length=1,
         max_length=50,
-        num_beams=3,
+        num_beams=1,
     )
     generated_predictions = tokenizer.batch_decode(
         generated_ids, skip_special_tokens=False
