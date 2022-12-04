@@ -27,7 +27,7 @@ def main():
                     "python",
                     "evaluate.py",
                     prediction_file_path,
-                    model_name,
+                    evaluation_name,
                     f"--output_file_path {output_file_path}"
                 ]
             )
