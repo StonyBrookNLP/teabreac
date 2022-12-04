@@ -16,6 +16,12 @@ def main():
             output_file_path = os.path.join(
                 "evaluations", model_name + "__" + evaluation_name + ".json"
             )
+            if not os.path.exists(prediction_file_path):
+                print(
+                    f"The prediction file path {prediction_file_path} doesn't exist yet. "
+                    f"So skipping evaluation for now."
+                )
+                continue
             command = " ".join(
                 [
                     "python",
