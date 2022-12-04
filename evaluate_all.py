@@ -15,14 +15,15 @@ def main():
                 print(f"Skipping {evaluation_name} as it needs to be evaluated on the leaderboard.")
                 continue
 
-            model_name += "-"
-            model_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_with_data_name = model_name
+            model_with_data_name += "-"
+            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
 
             prediction_file_path = os.path.join(
-                "predictions", model_name + "__" + evaluation_name + ".jsonl"
+                "predictions", model_with_data_name + "__" + evaluation_name + ".jsonl"
             )
             output_file_path = os.path.join(
-                "evaluations", model_name + "__" + evaluation_name + ".json"
+                "evaluations", model_with_data_name + "__" + evaluation_name + ".json"
             )
 
             if not os.path.exists(prediction_file_path):

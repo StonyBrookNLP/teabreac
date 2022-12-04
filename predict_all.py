@@ -14,12 +14,13 @@ def main():
             evaluation_file_path,
         ) in EVALUATION_NAME_TO_FILEPATH.items():
 
-            model_name += "-"
-            model_name += evaluation_name.replace("_dev", "").replace("_test", "")
-            model_path = f"StonyBrookNLP/{model_name}"
+            model_with_data_name = model_name
+            model_with_data_name += "-"
+            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_path = f"StonyBrookNLP/{model_with_data_name}"
 
             output_file_path = os.path.join(
-                "predictions", model_name + "__" + evaluation_name + ".jsonl"
+                "predictions", model_with_data_name + "__" + evaluation_name + ".jsonl"
             )
             command = " ".join(
                 [

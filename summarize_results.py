@@ -33,11 +33,12 @@ def main():
         dataframe_dict["model"].append(model_name)
         for evaluation_name in evaluation_names:
 
-            model_name += "-"
-            model_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_with_data_name = model_name
+            model_with_data_name += "-"
+            model_with_data_name += evaluation_name.replace("_dev", "").replace("_test", "")
 
             metrics_file_path = os.path.join(
-                "evaluations", model_name + "__" + evaluation_name + ".json"
+                "evaluations", model_with_data_name + "__" + evaluation_name + ".json"
             )
             if not os.path.exists(metrics_file_path):
                 metric_value = "n/a"
