@@ -256,6 +256,7 @@ def main():
     result = compute_answer_scores_with_official_scripts(
         prediction_instances, args.dataset
     )
+    result.pop("data", None)
 
     print("\n---------------------------------------")
 
