@@ -20,7 +20,7 @@ def main():
             model_with_data_name += (
                 evaluation_name.replace("_dev", "").replace("_test", "").replace(
                     "_cs", ""
-                ).replace("_bpb", "")
+                ).replace("_bpb", "").replace("_", "-")
             )
 
             prediction_file_path = os.path.join(
