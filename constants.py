@@ -31,6 +31,6 @@ ALL_MODEL_NAMES = [ # Order is according to Table 1.
     "teabreac-nt5-small",
     "preasm-large",
     "teabreac-preasm-large",
-    "poet-large"
+    "poet-large",
     "teabreac-poet-large"
 ]
