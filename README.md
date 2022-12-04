@@ -26,7 +26,7 @@ You can use any of the models in the following way:
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 from digit_tokenization import enable_digit_tokenization # from digit_tokenization.py
 
-model_name = "teabreac-t5-3b-drop"
+model_name = "StonyBrookNLP/teabreac-t5-3b-drop"
 tokenizer = AutoTokenizer.from_pretrained(model_name, use_fast=False) # Fast doesn't work with digit tokenization
 model = AutoModelForSeq2SeqLM.from_pretrained(model_name)
 enable_digit_tokenization(tokenizer)
@@ -102,7 +102,7 @@ If you've generated all predictions and evaluations, you can also generate the f
 python summarize_results.py
 ```
 
-Note that all our experiments (training, prediction, evaluation) were done in allennlp, and we ported the models and prediction scripts to huggingface posthoc. So there may be slight difference (expectedly < 0.2 F1 points) in the numbers.
+Note that all our experiments (training, prediction, evaluation) were done in allennlp, and we ported the models and prediction scripts to huggingface posthoc. So there may be a slight difference in the numbers (expectedly less than one F1 point). We will be releasing allennlp code for training and prediction though. Stay tuned or ping me if you're interested.
 
 ## Citation
 
