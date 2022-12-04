@@ -64,7 +64,7 @@ For this, you can either download them using
 
 or download the raw data and process them yourself:
 ```bash
-./download_raw_target_datasets.sh # it folder in it has source.txt saying where we got it from.
+./download_raw_target_datasets.sh # each folder in it has source.txt saying where we got it from.
 pip install -r requirements/preprocess.txt
 python processing_scripts/preprocess_drop.py
 python processing_scripts/preprocess_drop_bpb.py
