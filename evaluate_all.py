@@ -10,6 +10,8 @@ def main():
         print(f"\n\nWorking on model {index+1}/{len(ALL_MODEL_NAMES)} [{model_name}].")
 
         for evaluation_name , _ in EVALUATION_NAME_TO_FILEPATH.items():
+            if evaluation_name in ("drop_test", "tatqa_test"):
+                print(f"Skipping {evaluation_name} as it needs to be evaluated on the leaderboard.")
             prediction_file_path = os.path.join(
                 "predictions", model_name + "__" + evaluation_name + ".jsonl"
             )
