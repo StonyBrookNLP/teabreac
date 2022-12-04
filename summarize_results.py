@@ -3,6 +3,8 @@ import json
 
 import pandas as pd
 
+from constants import ALL_MODEL_NAMES
+
 
 def main():
 
@@ -24,22 +26,7 @@ def main():
         "drop_bpb": [],
     }
 
-    ordered_model_names = [ # Order is according to Table 1.
-        "bart-large",
-        "teabreac-bart-large",
-        "t5-large",
-        "teabreac-t5-large",
-        "t5-3b",
-        "teabreac-t5-3b",
-        "nt5-small",
-        "teabreac-nt5-small",
-        "preasm-large",
-        "teabreac-preasm-large",
-        "poet-large"
-        "teabreac-poet-large"
-    ]
-
-    for model_name in ordered_model_names:
+    for model_name in ALL_MODEL_NAMES:
 
         evaluation_names = list(dataframe_dict.keys())[1:]
 

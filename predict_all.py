@@ -7,13 +7,17 @@ from constants import ALL_MODEL_NAMES, EVALUATION_NAME_TO_FILEPATH
 def main():
 
     for index, model_name in enumerate(ALL_MODEL_NAMES):
-        model_path = f"StonyBrookNLP/{model_name}"
         print(f"\n\nWorking on model {index+1}/{len(ALL_MODEL_NAMES)} [{model_name}].")
 
         for (
             evaluation_name,
             evaluation_file_path,
         ) in EVALUATION_NAME_TO_FILEPATH.items():
+
+            model_name += "-"
+            model_name += evaluation_name.replace("_dev", "").replace("_test", "")
+            model_path = f"StonyBrookNLP/{model_name}"
+
             output_file_path = os.path.join(
                 "predictions", model_name + "__" + evaluation_name + ".jsonl"
             )
@@ -26,12 +30,14 @@ def main():
                     output_file_path,
                 ]
             )
+
             if os.path.exists(output_file_path):
                 print(
                     f"The prediction file path {output_file_path} already exists. "
                     f"So skipping prediction."
                 )
                 continue
+
             print(command)
             subprocess.call(command.split())
 

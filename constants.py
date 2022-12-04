@@ -20,25 +20,17 @@ EVALUATION_NAME_TO_FILEPATH = {
     "numglue_test": "processed_target_datasets/numglue/test.jsonl",
 }
 
-model_name_prefixes = ["", "teabreac-"]
-model_name_middles = [
+ALL_MODEL_NAMES = [ # Order is according to Table 1.
     "bart-large",
+    "teabreac-bart-large",
     "t5-large",
+    "teabreac-t5-large",
     "t5-3b",
+    "teabreac-t5-3b",
     "nt5-small",
+    "teabreac-nt5-small",
     "preasm-large",
-    "poet-large",
-]
-model_name_suffixes = [
-    "-drop",
-    "-iirc-gold",
-    "-iirc-retrieved",
-    "-numglue",
-    "-tatqa",
-]
-ALL_MODEL_NAMES = [
-    model_name_prefix + model_name_middle + model_name_suffix
-    for model_name_prefix, model_name_middle, model_name_suffix in itertools.product(
-        model_name_prefixes, model_name_middles, model_name_suffixes
-    )
+    "teabreac-preasm-large",
+    "poet-large"
+    "teabreac-poet-large"
 ]
