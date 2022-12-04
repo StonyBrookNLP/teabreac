@@ -192,7 +192,7 @@ def main():
 
     if args.output_file_path:
         print(f"Saving metrics in {args.output_file_path}")
-        os.makedirs(os.path.dirname(args.output_file_path))
+        os.makedirs(os.path.dirname(args.output_file_path), exist_ok=True)
         with open(args.output_file_path, "w") as file:
             json.dump(result, file)
 
