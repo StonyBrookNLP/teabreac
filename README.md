@@ -101,7 +101,8 @@ If you've generated all predictions and evaluations, you can also generate the f
 python summarize_results.py
 ```
 
-Note that all our experiments (training, prediction, evaluation) were done in allennlp, and we ported the models and prediction scripts to huggingface posthoc. So there may be a slight difference in the numbers (expectedly less than one F1 point). We will be releasing allennlp code for training and prediction though. Stay tuned or ping me if you're interested.
+Note that all our experiments (training, prediction, evaluation) were done in allennlp, and we ported the models and prediction scripts to huggingface posthoc. So there is a slight difference in the numbers (all within 0.5 F1 points, sometimes higher sometimes lower). See `results_report.txt` for our huggingface regenerated numbers. If you're interested in allennlp code with identical numbers, feel free to ping me.
+
 
 ## Citation
 
